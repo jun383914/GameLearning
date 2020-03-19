@@ -7,9 +7,9 @@ using Engine.Models;
 
 namespace Engine.Factories
 {
-    internal class WorldFactory
+    internal static class WorldFactory
     {
-        internal World CreateWorld()
+        internal static World CreateWorld()
         {
             World newWorld = new World();
 
@@ -21,7 +21,7 @@ namespace Engine.Factories
                 "This is the house of your neighbor, Farmer Ted.",
                 "/Engine;component/Images/Locations/Farmhouse.png");
 
-            newWorld.AddLocation(0, -1, "Home", "This is your home.","/Engine;component/Images/Locations/Home.png");
+            newWorld.AddLocation(0, -1, "Home", "This is your home.", "/Engine;component/Images/Locations/Home.png");
 
             newWorld.AddLocation(-1, 0, "Trading Shop",
                "The shop of Susan, the trader.",
@@ -42,6 +42,8 @@ namespace Engine.Factories
             newWorld.AddLocation(0, 1, "Herbalist's hut",
                 "You see a small hut, with plants drying from the roof.",
                 "/Engine;component/Images/Locations/HerbalistsHut.png");
+
+            newWorld.LocationAt(0, 1).QuestsAvailableHere.Add(QuestFactory.GetQuestByID(1));
 
             newWorld.AddLocation(0, 2, "Herbalist's garden",
                 "There are many plants here, with snakes hiding behind them.",
