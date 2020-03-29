@@ -1,8 +1,4 @@
    <html>
-      <head>
-        <title>GameLearning Project</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-      </head>
       <body>
         <div id='content'>
     <h1 id="style">RPG C# Learning</h1>
