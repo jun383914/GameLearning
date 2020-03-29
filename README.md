@@ -1,7 +1,7 @@
 # C# RPG GameLearning
 
 ---
-This is a C# learning project I found online at https://scottlilly.com/build-a-cwpf-rpg/ - automatic!
+This is a C# learning project I found online at https://scottlilly.com/build-a-cwpf-rpg/ 
 
 I followed the tutorial and learned as much as I can. 
 
