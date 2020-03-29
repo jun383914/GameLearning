@@ -37,7 +37,8 @@ namespace Engine.Models
 
             Name = name;
             ImageName = string.Format("pack://application:,,,/Engine;component/Images/Monsters/{0}", imageName);
-            maximumHitPoints = hitPoints;
+            MaximumHitPoints = maximumHitPoints;
+            HitPoints = hitPoints;
             RewardExperiencePoints = rewardExperiencePoints;
             RewardGold = rewardGold;
 

@@ -10,11 +10,11 @@ namespace Engine.Models
     {
         private List<Location> _locations = new List<Location>();
 
-        internal void AddLocation(int xCoordinate, int yCcordinate, string name, string discription, string imagename)
+        internal void AddLocation(int xCoordinate, int yCoordinate, string name, string discription, string imagename)
         {
             Location Loc = new Location();
-            Loc.Xcoordinate = xCoordinate;
-            Loc.Ycoordinate = yCcordinate;
+            Loc.XCoordinate = xCoordinate;
+            Loc.YCoordinate = yCoordinate;
             Loc.Name = name;
             Loc.Description = discription;
             Loc.ImageName = imagename;
@@ -26,7 +26,7 @@ namespace Engine.Models
         {
             foreach(Location Loc in _locations)
             {
-                if(Loc.Xcoordinate == xCoordinate && Loc.Ycoordinate == yCoordinate)
+                if(Loc.XCoordinate == xCoordinate && Loc.YCoordinate == yCoordinate)
                 {
                     return Loc;
                 }
