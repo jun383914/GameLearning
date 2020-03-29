@@ -5,7 +5,7 @@
       </head>
       <body>
         <div id='content'>
-    <h1 id="markdown-to-github-style-web">Markdown to GitHub style web</h1>
+    <h1 id="style">RPG C# Learning</h1>
 <blockquote>
   <p>This is a C# learning project I found online at<link> https://scottlilly.com/build-a-cwpf-rpg/ <link>
 
