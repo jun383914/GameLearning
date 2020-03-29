@@ -11,7 +11,7 @@ The code was posted here for me to get familiar with how to use github, and as a
 
 ##Skills Practiced:
 
---MVC Concept
---How each elements relating to each other
---Having each elements interact with each other and display in the user interface
+*MVC Concept
+*How each elements relating to each other
+*Having each elements interact with each other and display in the user interface
 
