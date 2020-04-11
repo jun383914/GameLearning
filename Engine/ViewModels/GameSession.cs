@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using Engine.Models;
 using Engine.Factories;
-
+using Engine.EventArgs;
 
 namespace Engine.ViewModels
 {
     //Refactory: Having Player calss inheritance from BaseNotificationClass to reduce Duplicated code
     public class GameSession : BaseNotificationClass
     {
+        public event EventHandler<GameMessageEventArgs> OnMessageRaised;
+        #region Properties
+
         private Location _currentLocation;
         private Monster _currentMonster;
 
@@ -42,6 +45,13 @@ namespace Engine.ViewModels
 
                 OnPropertyChanged(nameof(CurrentMonster));
                 OnPropertyChanged(nameof(HasMonster));
+
+                
+                if(CurrentMonster!=null)
+                {
+                    RaiseMessaage("");
+                    RaiseMessaage($"You see a {CurrentMonster.Name} here!");
+                }
             }
         }
 
@@ -68,6 +78,7 @@ namespace Engine.ViewModels
         //Same concept as the get return statement
         public bool HasMonster => CurrentMonster != null;
 
+        #endregion
         public GameSession()
         {
             CurrentPlayer = new Player { Name = "Scott", 
@@ -131,6 +142,14 @@ namespace Engine.ViewModels
         private void GetMonsterAtLocation()
         {
             CurrentMonster = CurrentLocation.GetMonster();
+        }
+
+        
+        private void RaiseMessaage(string message)
+        {
+            //if there is anything subscribe to OnMessageRaised event, it will pass its instance and the new event with the message
+            //so we pass the information we need along with the event
+            OnMessageRaised?.Invoke(this, new GameMessageEventArgs(message));
         }
     }
 }
