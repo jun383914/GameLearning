@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using Engine.Factories;
 using System.Collections.ObjectModel;
 
 namespace Engine.Models
@@ -11,6 +11,8 @@ namespace Engine.Models
     //Refactory: Having Player calss inheritance from BaseNotificationClass to reduce Duplicated code
     public class Player : BaseNotificationClass
     {
+        #region Properties
+        
         private string _name;
         private string _charaterClass;
         private int _hitPoints;
@@ -72,15 +74,25 @@ namespace Engine.Models
                 OnPropertyChanged(nameof(Gold));
             }
         }
+        #endregion
         public ObservableCollection<GameItems> Inventory { get; set; }
 
+        public List<GameItems> Weapons =>
+            Inventory.Where(i => i is Weapon).ToList();
+
         public ObservableCollection<QuestStatus> Quests { get; set; }
+
 
         public Player()
         {
             Inventory = new ObservableCollection<GameItems>();
             Quests = new ObservableCollection<QuestStatus>();
         }
+        public void AddItemToInventory(GameItems item)
+        {
+            Inventory.Add(item);
 
+            OnPropertyChanged(nameof(Weapons));
+        }
     }
 }

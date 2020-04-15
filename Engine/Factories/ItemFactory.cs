@@ -29,11 +29,15 @@ namespace Engine.Factories
 
         public static GameItems CreateGameItem(int itemTypeID)
         {
-            GameItems standItem = _standardGameItems.FirstOrDefault(item => item.ItemTypeID == itemTypeID);
+            GameItems standardItem = _standardGameItems.FirstOrDefault(item => item.ItemTypeID == itemTypeID);
 
-            if (standItem != null)
+            if (standardItem != null)
             {
-                return standItem.Clone();
+                if(standardItem is Weapon)
+                {
+                    return (standardItem as Weapon).Clone();
+                }
+                return standardItem.Clone();
             }
             return null;
         }

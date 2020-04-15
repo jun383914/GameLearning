@@ -37,7 +37,7 @@ namespace Engine.Models
             
             int totalChances = MonstersHere.Sum(m => m.ChanceOfEncountering);
 
-            int randomNumber = RandomNumberGenerator.SimpleNumberBetween(1, totalChances);
+            int randomNumber = RandomNumberGenerator.NumberBetween(1, totalChances);
 
             int runningTotal = 0;
 
