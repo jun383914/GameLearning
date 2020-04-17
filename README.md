@@ -15,3 +15,6 @@ The code was posted here for me to get familiar with how to use github, and as a
 * How each elements relating to each other
 * Having each elements interact with each other and display in the user interface
 
+---
+## Game Map
+![alt text](https://ibb.co/QMXfmWK)
