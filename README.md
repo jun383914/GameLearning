@@ -17,4 +17,4 @@ The code was posted here for me to get familiar with how to use github, and as a
 
 ---
 ## Game Map
-![alt text](https://ibb.co/QMXfmWK)
+![alt text](https://github.com/jun383914/GameLearning/blob/master/WPFGameWorld.png)
