@@ -88,6 +88,11 @@ namespace Engine.ViewModels
                                         ExperiencePoints = 0
                                         };
 
+            if (!CurrentPlayer.Weapons.Any())
+            {
+                CurrentPlayer.AddItemToInventory(ItemFactory.CreateGameItem(1001));
+            }
+
             CurrentWorld = WorldFactory.CreateWorld();
 
             CurrentLocation = CurrentWorld.LocationAt(0,0);
