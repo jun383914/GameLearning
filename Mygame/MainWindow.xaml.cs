@@ -10,13 +10,12 @@ namespace Mygame
     /// </summary>
     public partial class MainWindow : Window
     {
-        private GameSession _gameSession;
+        private GameSession _gameSession = new GameSession();
 
         public MainWindow()
         {
             InitializeComponent();
 
-            _gameSession = new GameSession();
             //Have OnMessageRaised event point to OnGameMessageRaised event, so the message can be displayed in UI.
             _gameSession.OnMessageRaised += OnGameMessageRaised;
 

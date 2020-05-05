@@ -17,7 +17,8 @@ namespace Engine.Models
             Loc.YCoordinate = yCoordinate;
             Loc.Name = name;
             Loc.Description = discription;
-            Loc.ImageName = imagename;
+            //Add images location here so worldfacutory can reuse the code
+            Loc.ImageName = $"/Engine;component/Images/Locations/{imagename}";
 
             _locations.Add(Loc);
         }
