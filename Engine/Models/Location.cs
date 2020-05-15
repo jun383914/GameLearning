@@ -17,6 +17,9 @@ namespace Engine.Models
         //Adding code so different monsters can interacted based on locations
         public List<MonsterEncounter> MonstersHere = new List<MonsterEncounter>();
 
+        public Trader TraderHere { get; set; }
+
+
         public void AddMonster(int monsterID, int chanceOfEncountering)
         {
             if (MonstersHere.Exists(m => m.MonsterID == monsterID))

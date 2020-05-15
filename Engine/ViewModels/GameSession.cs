@@ -14,8 +14,9 @@ namespace Engine.ViewModels
 
         private Location _currentLocation;
         private Monster _currentMonster;
+        private Trader _currentTrader;
 
-       public World CurrentWorld { get; set; }
+        public World CurrentWorld { get; set; }
        public Player CurrentPlayer { get; set; }
        public Location CurrentLocation 
         {
@@ -33,6 +34,19 @@ namespace Engine.ViewModels
                 CompleteQuestsAtLocation();
                 GivePlayerQuestsAtLocation();
                 GetMonsterAtLocation();
+
+                CurrentTrader = CurrentLocation.TraderHere;
+            }
+        }
+        public Trader CurrentTrader
+        {
+            get { return _currentTrader; }
+            set
+            {
+                _currentTrader = value;
+
+                OnPropertyChanged(nameof(CurrentTrader));
+                OnPropertyChanged(nameof(HasTrader));
             }
         }
 
@@ -70,6 +84,7 @@ namespace Engine.ViewModels
 
         //Same concept as the get return statement
         public bool HasMonster => CurrentMonster != null;
+        public bool HasTrader => CurrentTrader != null;
 
         #endregion
         public GameSession()
