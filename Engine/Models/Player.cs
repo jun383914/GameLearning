@@ -94,5 +94,25 @@ namespace Engine.Models
 
             OnPropertyChanged(nameof(Weapons));
         }
+        //Similiar to AddItemToInventory method, we need to notify UI we a gameitem was removed
+                public void RemoveItemFromInventory(GameItems item)
+        {
+            Inventory.Remove(item);
+ 
+            OnPropertyChanged(nameof(Weapons));
+        }
+ 
+        public bool HasAllTheseItems(List<ItemQuantity> items)
+        {
+            foreach (ItemQuantity item in items)
+            {
+                if (Inventory.Count(i => i.ItemTypeID == item.ItemID) < item.Quantity)
+                {
+                    return false;
+                }
+            }
+ 
+            return true;
+        }
     }
 }
