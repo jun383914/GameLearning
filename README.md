@@ -16,10 +16,7 @@ The code was posted here for me to get familiar with how to use github, and as a
 * Having each elements interact with each other and display in the user interface
 
 ---
-## Game Map
-![alt text](https://github.com/jun383914/GameLearning/blob/master/WPFGameWorld.png)
 
----
 ## Notes
 ### Lesson 03.1
 * Introduced basic XAML(stands for Extensible Application Markup Language) operations.
@@ -28,3 +25,6 @@ The code was posted here for me to get familiar with how to use github, and as a
 * Grid.ColumnSpan: define that how many columns you need this class to take.
 ### Lesson 03.2
 * Talks about using repository to track changes and reverse changes if needed.
+---
+## Game Map
+![alt text](https://github.com/jun383914/GameLearning/blob/master/WPFGameWorld.png)
