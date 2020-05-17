@@ -29,6 +29,7 @@ The code was posted here for me to get familiar with how to use github, and as a
 ### Lesson 03.3
 * Start with designing games, based on what Nouns project has, create class to reprensent "things" in the game. Those classes will be Models in the game.
 * Place Model classes in a sepeate project(project type will be class library) under solution, this will make later auotomated testing easier.
+* Analyze what information do you want these "things"(or business object) to hold, what data type will it be? Then place it in the Model class as property so you can control the accessibility of it. 
 ---
 ### Lesson 03.4
 *
