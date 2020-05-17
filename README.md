@@ -32,7 +32,13 @@ The code was posted here for me to get familiar with how to use github, and as a
 * Analyze what information do you want these "things"(or business object) to hold, what data type will it be? Then place it in the Model class as property so you can control the accessibility of it. 
 ---
 ### Lesson 03.4
-*
+* How do we reflect changes in players class onto UI? We can create player object in views but this can be hard for us to create automated test later on. Also, if the project becomes larger, this will cause issues as well. 
+* A better way to serve as a middleman(also called Controllers or Presenter) between view and models is something called "ViewModels". I will create players class object here. The name of class is GameSession.
+* Make sure to double check class propery accessibilty and include using statement to add reference if necessary.
+* In ViewModels, I create Player CurrentPlayer property to hold player object.
+```
+  Player CurrentPlayer{get;set;}
+```
 ---
 ## Game Map
 ![alt text](https://github.com/jun383914/GameLearning/blob/master/WPFGameWorld.png)
