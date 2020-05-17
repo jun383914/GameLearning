@@ -24,7 +24,14 @@ The code was posted here for me to get familiar with how to use github, and as a
 * Grid.RowDefinitions: Auto means to adjust based on the size of the content; * means take much space as you can; numbers means pixels it can use.
 * Grid.ColumnSpan: define that how many columns you need this class to take.
 ### Lesson 03.2
-* Talks about using repository to track changes and reverse changes if needed.
+* Use repository to track changes and reverse changes if needed.
+---
+### Lesson 03.3
+* Start with designing games, based on what Nouns project has, create class to reprensent "things" in the game. Those classes will be Models in the game.
+* Place Model classes in a sepeate project(project type will be class library) under solution, this will make later auotomated testing easier.
+---
+### Lesson 03.4
+*
 ---
 ## Game Map
 ![alt text](https://github.com/jun383914/GameLearning/blob/master/WPFGameWorld.png)
