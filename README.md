@@ -41,5 +41,37 @@ The code was posted here for me to get familiar with how to use github, and as a
   Player CurrentPlayer{get;set;}
 ```
 ---
+### Lesson 03.5
+* To let UI project work with class in Engine project, I need to add reference to Engine project which can be done via rightclick reference under UI project to add reference.
+* For views to work with viewmodels, I will need to let cs file under UI knows what to work with, and that is by creating a private viewmodel variable(_gamesession).
+* Code below is using DataContext to let UI cs file know what object UI is working with.
+```
+  DataContext=_gameSession;
+```
+* I use label inside Grid to define specific contents for rows and colomns; 
+```
+  Content="Name:"
+```
+  simply display the content.
+```
+  Content="{Binding CurrentPlayer.Name}"
+```
+  This is how I bind property of currentplayer to be displayed in the UI.
+
+---
+### Lesson 03.6
+* Use eventhandlers to update UI if object propery was changed.
+* Built-in Interface INotifyProperyChanged can help with it. Here is the implementation of the interface:
+```
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+```
+* Also, Aoto property now needs to be more specific and I need to write out the backing variable.
+* This pattern is specific called: Publish and Subscribe design pattern. "Player model object is publishing some info/event and UI is subscribing the event and will update UI"
+---
 ## Game Map
 ![alt text](https://github.com/jun383914/GameLearning/blob/master/WPFGameWorld.png)
