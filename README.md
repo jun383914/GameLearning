@@ -73,5 +73,17 @@ The code and notes posted here is for me to reference back later on in my study.
 * Also, Aoto property now needs to be more specific and I need to write out the backing variable.
 * This pattern is specific called: Publish and Subscribe design pattern. "Player model object is publishing some info/event and UI is subscribing the event and will update UI"
 ---
+
+### Lesson 04.1
+* 
+* 
+* 
+
+---
+### Lesson 04.2
+* 
+* 
+* 
+---
 ## Game Map
 ![alt text](https://github.com/jun383914/GameLearning/blob/master/WPFGameWorld.png)
