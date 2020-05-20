@@ -131,9 +131,10 @@ The code and notes posted here is for me to reference back later on in my study.
 ```
 ---
 ### Lesson 04.2
-* 
-* 
-* 
----
+* Create World class to hold locations and check if a location to North,South,East and West is available.(Manage location object)
 ## Game Map
 ![alt text](https://github.com/jun383914/GameLearning/blob/master/WPFGameWorld.png)
+* Factory class is used to create other objects.This will give us different places to create world object.
+* In the world class, I created a list to hold Location object. Also AddLocation method was created to hold location metadata.
+* Using world object and AddLocation method to add locations into world factory class.
+* In world class, I created a method to give back location info at a specific coordinate.
