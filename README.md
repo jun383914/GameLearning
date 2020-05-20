@@ -75,10 +75,60 @@ The code and notes posted here is for me to reference back later on in my study.
 ---
 
 ### Lesson 04.1
-* 
-* 
-* 
-
+* Player can go to different places in the game so I need to create a location class under Model folder to hold Location information
+* Location information that I need the location class to hold are:
+```
+  public int XCoordinate { get; set; }
+  public int YCoordinate { get; set; }
+  public string Name { get; set; }
+  public string Description { get; set; }
+  public string ImageName { get; set; }
+```
+* Same as player class, a currentlocation property is need in GameSession ViewModel so I can communicate the information between class and view.
+* To design and create a section in the UI to hold location information and pictures, monster information and pictures and game message, I need to work on specific Grid.
+```
+          <Grid Grid.Row="1" Grid.Column="1"
+              Background="Beige">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Border Grid.Row="0" Grid.Column="1"
+                    BorderBrush="Gainsboro"
+                    BorderThickness="1">
+                
+                <Grid Margin="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <TextBlock Grid.Row="0"
+                               HorizontalAlignment="Center"
+                               Text="{Binding CurrentLocation.Name}"/>
+                    
+                    <Image Grid.Row="1"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Height="125"
+                           Width="125"
+                           Source="{Binding CurrentLocation.ImageName}"/>
+                    
+                    <TextBlock Grid.Row="2"
+                               HorizontalAlignment="Center"
+                               Text="{Binding CurrentLocation.Description}"/>
+                </Grid>
+                
+            </Border>
+        </Grid>
+```
 ---
 ### Lesson 04.2
 * 
